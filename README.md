@@ -1,16 +1,37 @@
+Mod Information
+=======
+
+### Features
+Currently has a menu that you can open with `M`, and the option to rebind the key
 
 Installation information
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+### Dependencies
+- Minecraft 26.3
+- Gradle with JDK version 25
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+### Building and Dev
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Build can be run with `./gradlew build`
+
+A development environment can be entered with `./gradlew runClient`
+
+On Microsoft Windows, replace `./gradlew` with `gradlew.bat`
+
+Github Builds and Releases
+=======
+
+Builds are automatically run upon having content pushed to the Github repository. Every build is saved as an artifact under the actions tab of the Github repo.
+
+A release can be published to the releases category of the Github page instead of just being run in actions by pushing to main with a `v` tag. For example,
+
+```
+git tag 1.0.1
+git push origin v1.0.1
+```
+
+This should only be used for pushes to github that are finalized polished versions that contain code that the end user should be seeing in use.
 
 Mapping Names:
 ============
