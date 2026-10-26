@@ -1,0 +1,52 @@
+# ---- Gradle ----
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ---- Minecraft / NeoForge dev environment ----
+run/
+runs/
+run-data/
+logs/
+crash-reports/
+*.log
+repo/
+
+# Generated data (datagen output is usually committed under src/generated;
+# remove the next line if you commit generated resources)
+# src/generated/resources/.cache/
+
+# ---- IntelliJ IDEA ----
+.idea/
+out/
+*.iml
+*.ipr
+*.iws
+
+# ---- Eclipse ----
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+eclipse/
+*.launch
+
+# ---- VS Code ----
+.vscode/
+.factorypath
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# ---- Misc ----
+*.swp
+*.bak
+*.tmp
+hs_err_pid*
+replay_pid*
