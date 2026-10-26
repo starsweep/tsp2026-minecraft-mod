@@ -27,7 +27,7 @@ Builds are automatically run upon having content pushed to the Github repository
 A release can be published to the releases category of the Github page instead of just being run in actions by pushing to main with a `v` tag. For example,
 
 ```
-git tag 1.0.1
+git tag v1.0.1
 git push origin v1.0.1
 ```
 
