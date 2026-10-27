@@ -26,7 +26,7 @@ public class OptionsMenuScreen extends Screen {
         }).bounds(x, y, w, h).build());
 
         // Option 2: a toggle that updates its own label
-        addRenderableWidget(Button.builder(Component.literal("Toggle: OFF"), btn -> {
+        addRenderableWidget(Button.builder(Component.literal("Toggle: " + (toggled ? "ON" : "OFF")), btn -> {
             toggled = !toggled;
             btn.setMessage(Component.literal("Toggle: " + (toggled ? "ON" : "OFF")));
         }).bounds(x, y + 25, w, h).build());

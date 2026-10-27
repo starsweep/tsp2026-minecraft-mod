@@ -9,7 +9,8 @@ Installation information
 
 ### Dependencies
 - Minecraft 26.3
-- Gradle with JDK version 25
+- Gradle 9.8.0
+- JDK 25
 
 ### Building and Dev
 

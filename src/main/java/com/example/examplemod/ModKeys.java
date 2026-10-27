@@ -13,13 +13,14 @@ import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 @EventBusSubscriber(modid = ExampleMod.MODID, value = Dist.CLIENT)
 public class ModKeys {
     public static final KeyMapping.Category CATEGORY =
-            KeyMapping.Category.register(Identifier.fromNamespaceAndPath(ExampleMod.MODID, "main"));
+            new KeyMapping.Category(Identifier.fromNamespaceAndPath(ExampleMod.MODID, "main"));
 
     public static final KeyMapping OPEN_MENU =
             new KeyMapping("key.examplemod.open_menu", InputConstants.KEY_M, CATEGORY);
 
     @SubscribeEvent
     public static void registerKeys(RegisterKeyMappingsEvent event) {
+        event.registerCategory(CATEGORY);   // register the category first
         event.register(OPEN_MENU);
     }
 
