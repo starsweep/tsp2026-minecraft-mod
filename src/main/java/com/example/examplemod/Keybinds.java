@@ -11,7 +11,7 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 
 @EventBusSubscriber(modid = ExampleMod.MODID, value = Dist.CLIENT)
-public class ModKeys {
+public class Keybinds {
     public static final KeyMapping.Category CATEGORY =
             new KeyMapping.Category(Identifier.fromNamespaceAndPath(ExampleMod.MODID, "main"));
 
@@ -29,7 +29,7 @@ public class ModKeys {
         while (OPEN_MENU.consumeClick()) {
             Minecraft mc = Minecraft.getInstance();
             if (mc.gui.screen() == null) {
-                mc.gui.setScreen(new OptionsMenuScreen());
+                mc.gui.setScreen(new TestMenu());
             }
         }
     }

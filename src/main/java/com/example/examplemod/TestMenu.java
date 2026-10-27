@@ -4,10 +4,10 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
-public class OptionsMenuScreen extends Screen {
+public class TestMenu extends Screen {
     private boolean toggled = false;
 
-    public OptionsMenuScreen() {
+    public TestMenu() {
         super(Component.literal("My Menu"));
     }
 
