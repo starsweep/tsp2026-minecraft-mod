@@ -2,7 +2,7 @@ Untitled RPG Mod
 =======
 
 ### Features
-Currently has a menu that you can open with `M`, and the option to rebind the key
+Currently has a skill menu that you can open with `G`, and the option to rebind the key. Making purchases does not do anything at the moment.
 
 ### Planned Features
 - Skill tree with 4 paths, each having 2 smaller paths. Skills unlockable via EXP, and expand upon existing mechanics.

@@ -1,5 +1,7 @@
-package com.example.examplemod;
+package com.example.examplemod.client;
 
+import com.example.examplemod.ExampleMod;
+import com.example.examplemod.skilltree.SkillMenu;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
@@ -11,12 +13,12 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 
 @EventBusSubscriber(modid = ExampleMod.MODID, value = Dist.CLIENT)
-public class Keybinds {
+public class ModKeyMappings {
     public static final KeyMapping.Category CATEGORY =
             new KeyMapping.Category(Identifier.fromNamespaceAndPath(ExampleMod.MODID, "main"));
 
     public static final KeyMapping OPEN_MENU =
-            new KeyMapping("key.examplemod.open_menu", InputConstants.KEY_M, CATEGORY);
+            new KeyMapping("Open Skill Menu", InputConstants.KEY_G, CATEGORY);
 
     @SubscribeEvent
     public static void registerKeys(RegisterKeyMappingsEvent event) {
@@ -29,7 +31,7 @@ public class Keybinds {
         while (OPEN_MENU.consumeClick()) {
             Minecraft mc = Minecraft.getInstance();
             if (mc.gui.screen() == null) {
-                mc.gui.setScreen(new TestMenu());
+                mc.gui.setScreen(new SkillMenu());
             }
         }
     }
