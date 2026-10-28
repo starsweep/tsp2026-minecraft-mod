@@ -4,6 +4,7 @@ import com.example.examplemod.skilltree.records.SkillNode;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.input.KeyEvent;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
@@ -15,6 +16,7 @@ import org.jspecify.annotations.NonNull;
 import java.util.HashSet;
 import java.util.Set;
 
+import static com.example.examplemod.client.ModKeyMappings.OPEN_MENU;
 import static net.neoforged.neoforge.client.ClientHooks.playSound;
 
 public class SkillMenu extends Screen {
@@ -139,5 +141,14 @@ public class SkillMenu extends Screen {
     public boolean mouseReleased(@NonNull MouseButtonEvent event) {
         dragging = false;
         return true;
+    }
+
+    @Override
+    public boolean keyPressed(KeyEvent k) {
+        if(OPEN_MENU.matches(k)) {
+            this.onClose();
+            return true;
+        }
+        return super.keyPressed(k);
     }
 }

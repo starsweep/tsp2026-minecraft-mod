@@ -12,6 +12,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 
+import java.awt.event.KeyEvent;
+
 @EventBusSubscriber(modid = ExampleMod.MODID, value = Dist.CLIENT)
 public class ModKeyMappings {
     public static final KeyMapping.Category CATEGORY =
