@@ -1,22 +1,11 @@
 Untitled RPG Mod
 =======
 
-### Features
-Currently has a skill menu that you can open with `G`, and the option to rebind the key. Making purchases does not do anything at the moment.
+A mod that adds progression and story elements to Minecraft.
 
-### Planned Features
-- Skill tree with 4 paths, each having 2 smaller paths. Skills unlockable via EXP, and expand upon existing mechanics.
-- Potion flask item, imbuable with a potion and refillable with water. Less effective than an equivalent standard potion. Comes in splash and lingering variant.
-- Cauldron brewing, able to make weaker potions early game.
-- Lectern enchanting, no lapis needed, marginally buffed by bookshelves. Meant to make enchantment accessible early game.
-- Disenchanting table, takes EXP to put enchantment from item onto book.
-- No permanent tool breaking, when durability runs out the tool will enter an unusable "broken" state.
-- Repairing at an anvil has no EXP cost.
-- New bosses in Nether and trial chambers, rework existing bosses to be more rewarding and engaging
-- More direct story content, findable from various loot tables.
+More information can be found on the GitHub Wiki Page.
 
-Dev information
-=======
+# Dev information
 
 ### Dependencies
 - Minecraft 26.3
@@ -31,8 +20,7 @@ A development environment can be entered with `./gradlew runClient`
 
 On Microsoft Windows, replace `./gradlew` with `gradlew.bat`
 
-Github Builds and Releases
-=======
+# Github Builds and Releases
 
 Builds are automatically run upon having content pushed to the Github repository. Every build is saved as an artifact under the actions tab of the Github repo.
 
@@ -45,14 +33,12 @@ git push origin v1.0.1
 
 This should only be used for pushes to github that are finalized polished versions that contain code that the end user should be seeing in use.
 
-Mapping Names:
-============
+# Mapping Names:
 By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
 in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
 license. For the latest license text, refer to the mapping file itself, or the reference copy here:
 https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
 
-Additional Resources: 
-==========
+# Additional Resources:
 Community Documentation: https://docs.neoforged.net/  
 NeoForged Discord: https://discord.neoforged.net/

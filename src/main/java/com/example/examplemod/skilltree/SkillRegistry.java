@@ -38,7 +38,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Heavy Melee",
                 -spacer, 0,
-                Items.IRON_CHESTPLATE,
+                Items.WOODEN_AXE,
                 List.of("The Beginning"),
                 5,
                 "Critical strikes have a 5% chance to deal more damage.",
@@ -47,7 +47,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Light Melee",
                 0, -spacer,
-                Items.IRON_SWORD,
+                Items.WOODEN_SWORD,
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to dodge incoming damage.",
@@ -66,7 +66,7 @@ public class SkillRegistry {
         // T2 Magic ---------------------------------------------------
 
         add(new SkillNode(
-                "Enchanting",
+                "Basic Enchanting",
                 2 * spacer, -spacer,
                 Items.LECTERN,
                 List.of("Magic"),
@@ -75,7 +75,7 @@ public class SkillRegistry {
                 "TODO"
         ));
         add(new SkillNode(
-                "Brewing",
+                "Basic Brewing",
                 2 * spacer, spacer,
                 Items.CAULDRON,
                 List.of("Magic"),
@@ -98,7 +98,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Lunging",
                 -spacer, -2 * spacer,
-                Items.WOODEN_SPEAR,
+                Items.GOLDEN_SPEAR,
                 List.of("Light Melee"),
                 10,
                 "Spears have an innate weak lunge effect",
@@ -108,12 +108,12 @@ public class SkillRegistry {
         // T2 Heavy Melee ---------------------------------------------------
 
         add(new SkillNode(
-                "Macing",
+                "Cleaving",
                 -2 * spacer, -spacer,
-                Items.MACE,
+                Items.GOLDEN_AXE,
                 List.of("Heavy Melee"),
                 10,
-                "All strikes have a weak mace effect.",
+                "Strikes with axes deal more damage the farther you fall. Negate some fall damage when striking this way.",
                 "A single, decisive blow."
         ));
         add(new SkillNode(
@@ -134,8 +134,8 @@ public class SkillRegistry {
                 Items.BOW,
                 List.of("Ranged Weaponry"),
                 10,
-                "Bows have an increased charge rate.",
-                "TODO"
+                "Gain the ability to walk at normal speed while drawing a bow.",
+                "An archer's draw must be quick."
         ));
         add(new SkillNode(
                 "Crossbow Fluency",
@@ -144,7 +144,7 @@ public class SkillRegistry {
                 List.of("Ranged Weaponry"),
                 10,
                 "Crossbows deal more damage on headshots.",
-                "TODO"
+                "A marksman's hand must be steady."
         ));
     }
 
