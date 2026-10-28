@@ -10,7 +10,7 @@ public class SkillRegistry {
     public static final Map<String, SkillNode> NODES = new LinkedHashMap<>();
 
     static {
-        int spacer = 80;
+        double spacer = 80;
 
         // T0 the beginning -----------------------------------------
 

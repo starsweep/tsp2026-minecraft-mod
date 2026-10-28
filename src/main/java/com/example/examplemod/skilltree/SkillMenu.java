@@ -1,6 +1,7 @@
 package com.example.examplemod.skilltree;
 
 import com.example.examplemod.skilltree.records.SkillNode;
+import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
@@ -11,20 +12,21 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.neoforged.fml.common.EventBusSubscriber;
 import org.jspecify.annotations.NonNull;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import static com.example.examplemod.client.ModKeyMappings.OPEN_MENU;
-import static net.neoforged.neoforge.client.ClientHooks.playSound;
 
+@EventBusSubscriber
 public class SkillMenu extends Screen {
     private static final int NODE_SIZE = 24;
     private static final int MARGIN = 20;
 
-    private double offsetX = 0, offsetY = 0;
-    // Temporary: replace with your data attachment later
+    private double offsetX = 0, offsetY = 0, scale = 1;
+    // replace with data attachment later
     private final Set<String> unlocked = new HashSet<>();
     private Level level;
 
@@ -38,10 +40,18 @@ public class SkillMenu extends Screen {
     private int right()  { return width - MARGIN; }
     private int bottom() { return height - MARGIN; }
 
-    // Where a node's top-left corner lands on screen
-    private int screenX(SkillNode n) { return (left() + right()) / 2 + n.x() + (int) offsetX - NODE_SIZE / 2; }
-    private int screenY(SkillNode n) { return (top() + bottom()) / 2 + n.y() + (int) offsetY - NODE_SIZE / 2; }
+    private double centerX() { return (left() + right()) / 2.0; }
+    private double centerY() { return (top() + bottom()) / 2.0; }
 
+    private int nodeSize() { return Math.max(4, (int) Math.round(NODE_SIZE * scale)); }
+
+    // Center of a node on screen
+    private double nodeCX(SkillNode n) { return centerX() + offsetX + n.x() * scale; }
+    private double nodeCY(SkillNode n) { return centerY() + offsetY + n.y() * scale; }
+
+    // Top-left corner of a node on screen
+    private int screenX(SkillNode n) { return (int) Math.round(nodeCX(n) - nodeSize() / 2.0); }
+    private int screenY(SkillNode n) { return (int) Math.round(nodeCY(n) - nodeSize() / 2.0); }
     private boolean isAvailable(SkillNode n) {
         return unlocked.containsAll(n.parents());
     }
@@ -62,26 +72,31 @@ public class SkillMenu extends Screen {
                 SkillNode parent = SkillRegistry.NODES.get(parentId);
                 if (parent == null) continue;
                 int color = unlocked.contains(parentId) ? 0xFFE0B040 : 0xFF554433;
-                drawLine(g,
-                        screenX(parent) + NODE_SIZE / 2, screenY(parent) + NODE_SIZE / 2,
-                        screenX(node) + NODE_SIZE / 2, screenY(node) + NODE_SIZE / 2, color);
+                drawLine(g, (int) nodeCX(parent), (int) nodeCY(parent),
+                        (int) nodeCX(node),   (int) nodeCY(node), color);
             }
         }
 
         // Nodes
         SkillNode hovered = null;
         for (SkillNode node : SkillRegistry.NODES.values()) {
-            int x = screenX(node), y = screenY(node);
             int plate = unlocked.contains(node.id()) ? 0xFFE0B040
                     : isAvailable(node)            ? 0xFF8A7A5A
                     :                                0xFF3A3028;
-            g.fill(x - 2, y - 2, x + NODE_SIZE + 2, y + NODE_SIZE + 2, 0xFF000000);
-            g.fill(x, y, x + NODE_SIZE, y + NODE_SIZE, plate);
-            g.item(new ItemStack(node.icon()), x + 4, y + 4);
+            int s = nodeSize();
+            int border = Math.max(1, (int) Math.round(2 * scale));
+            int x = screenX(node), y = screenY(node);
+            g.fill(x - border, y - border, x + s + border, y + s + border, 0xFF000000);
+            g.fill(x, y, x + s, y + s, plate);
 
-            if (mouseX >= x && mouseX < x + NODE_SIZE && mouseY >= y && mouseY < y + NODE_SIZE) {
-                hovered = node;
-            }
+            // Icon: scale only this small piece, around the node's center
+            g.pose().pushMatrix();
+            g.pose().translate(x + s / 2f, y + s / 2f);
+            g.pose().scale((float) scale, (float) scale);
+            g.item(new ItemStack(node.icon()), -8, -8); // items are 16x16, so -8 centers them
+            g.pose().popMatrix();
+
+            if (hit(node, mouseX, mouseY)) hovered = node;
         }
 
         g.disableScissor();
@@ -102,8 +117,8 @@ public class SkillMenu extends Screen {
     }
 
     private boolean hit(SkillNode n, double mx, double my) {
-        int x = screenX(n), y = screenY(n);
-        return inWindow(mx, my) && mx >= x && mx < x + NODE_SIZE && my >= y && my < y + NODE_SIZE;
+        int x = screenX(n), y = screenY(n), s = nodeSize();
+        return inWindow(mx, my) && mx >= x && mx < x + s && my >= y && my < y + s;
     }
 
     private boolean dragging = false;
@@ -140,6 +155,21 @@ public class SkillMenu extends Screen {
     @Override
     public boolean mouseReleased(@NonNull MouseButtonEvent event) {
         dragging = false;
+        return true;
+    }
+
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollX, double scrollY) {
+        if (scrollY == 0 || !inWindow(mouseX, mouseY)) return false;
+
+        double newScale = Math.clamp(scale * Math.pow(1.1, scrollY), 0.3, 3.0);
+        double ratio = newScale / scale;
+
+        // Keep the map point under the cursor in place
+        offsetX = (mouseX - centerX()) - ((mouseX - centerX()) - offsetX) * ratio;
+        offsetY = (mouseY - centerY()) - ((mouseY - centerY()) - offsetY) * ratio;
+
+        scale = newScale;
         return true;
     }
 

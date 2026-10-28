@@ -5,8 +5,8 @@ import java.util.List;
 
 public record SkillNode(
         String id,
-        int x,
-        int y,
+        double x,
+        double y,
         Item icon,
         List<String> parents,
         int cost,
