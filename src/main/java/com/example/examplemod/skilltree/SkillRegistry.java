@@ -12,7 +12,7 @@ public class SkillRegistry {
     static {
         int spacer = 80;
 
-        // T1 base categories -----------------------------------------
+        // T0 the beginning -----------------------------------------
 
         add(new SkillNode(
                 "The Beginning",
@@ -20,9 +20,12 @@ public class SkillRegistry {
                 Items.GRASS_BLOCK,
                 List.of(),
                 1,
-                "Unlock the skilltree!",
+                "Unlock the skill tree!",
                 "Every grand adventure begins with a single step."
         ));
+
+        // T1 base categories -----------------------------------------
+
         add(new SkillNode(
                 "Magic",
                 spacer, 0,
