@@ -21,7 +21,7 @@ public class SkillRegistry {
                 List.of(),
                 1,
                 "Unlock the skilltree!",
-                "The start of a grand adventure begins with a single step."
+                "Every grand adventure begins with a single step."
         ));
         add(new SkillNode(
                 "Magic",
@@ -29,8 +29,8 @@ public class SkillRegistry {
                 Items.EXPERIENCE_BOTTLE,
                 List.of("The Beginning"),
                 5,
-                "Gain a 5% chance to boost experience dropped by mobs.",
-                "A glimpse into the arcane."
+                "Gain a 5% chance to boost experience picked up.",
+                "A glimpse into the mysteries of the arcane."
         ));
         add(new SkillNode(
                 "Heavy Melee",
