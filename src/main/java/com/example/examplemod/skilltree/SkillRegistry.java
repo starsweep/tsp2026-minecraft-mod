@@ -89,7 +89,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Dual Wielding",
                 spacer, -2 * spacer,
-                Items.GOLDEN_SWORD,
+                Items.STONE_SWORD,
                 List.of("Light Melee"),
                 10,
                 "Gain the ability to use a sword in your offhand.",
@@ -98,7 +98,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Lunging",
                 -spacer, -2 * spacer,
-                Items.GOLDEN_SPEAR,
+                Items.STONE_SPEAR,
                 List.of("Light Melee"),
                 10,
                 "Spears have an innate weak lunge effect",
@@ -110,7 +110,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Cleaving",
                 -2 * spacer, -spacer,
-                Items.GOLDEN_AXE,
+                Items.STONE_AXE,
                 List.of("Heavy Melee"),
                 10,
                 "Strikes with axes deal more damage the farther you fall. Negate some fall damage when striking this way.",
@@ -134,7 +134,7 @@ public class SkillRegistry {
                 Items.BOW,
                 List.of("Ranged Weaponry"),
                 10,
-                "Gain the ability to walk at normal speed while drawing a bow.",
+                "Gain the ability to move at normal speed while drawing a bow.",
                 "An archer's draw must be quick."
         ));
         add(new SkillNode(

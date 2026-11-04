@@ -1,5 +1,6 @@
 package com.example.examplemod.items;
 
+import com.example.examplemod.data.ModDataComponents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;

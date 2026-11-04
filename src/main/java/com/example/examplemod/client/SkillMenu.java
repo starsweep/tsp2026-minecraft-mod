@@ -1,7 +1,10 @@
-package com.example.examplemod.skilltree;
+package com.example.examplemod.client;
 
+import com.example.examplemod.data.ModAttachments;
+import com.example.examplemod.skilltree.SkillRegistry;
+import com.example.examplemod.skilltree.SkillRules;
 import com.example.examplemod.skilltree.records.SkillNode;
-import com.mojang.blaze3d.vertex.PoseStack;
+import com.example.examplemod.skilltree.records.UnlockSkillPayload;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.client.gui.screens.Screen;
@@ -11,11 +14,10 @@ import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 import org.jspecify.annotations.NonNull;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import static com.example.examplemod.client.ModKeyMappings.OPEN_MENU;
@@ -26,9 +28,12 @@ public class SkillMenu extends Screen {
     private static final int MARGIN = 20;
 
     private double offsetX = 0, offsetY = 0, scale = 1;
-    // replace with data attachment later
-    private final Set<String> unlocked = new HashSet<>();
-    private Level level;
+
+    // pull unlocked data from attachment
+    private Set<String> unlocked() {
+        assert Minecraft.getInstance().player != null;
+        return Minecraft.getInstance().player.getData(ModAttachments.SKILLS).unlocked();
+    }
 
     public SkillMenu() {
         super(Component.literal("Skill Tree"));
@@ -53,7 +58,7 @@ public class SkillMenu extends Screen {
     private int screenX(SkillNode n) { return (int) Math.round(nodeCX(n) - nodeSize() / 2.0); }
     private int screenY(SkillNode n) { return (int) Math.round(nodeCY(n) - nodeSize() / 2.0); }
     private boolean isAvailable(SkillNode n) {
-        return unlocked.containsAll(n.parents());
+        return unlocked().containsAll(n.parents());
     }
 
     @Override
@@ -71,7 +76,7 @@ public class SkillMenu extends Screen {
             for (String parentId : node.parents()) {
                 SkillNode parent = SkillRegistry.NODES.get(parentId);
                 if (parent == null) continue;
-                int color = unlocked.contains(parentId) ? 0xFFE0B040 : 0xFF554433;
+                int color = unlocked().contains(parentId) ? 0xFFE0B040 : 0xFF554433;
                 drawLine(g, (int) nodeCX(parent), (int) nodeCY(parent),
                         (int) nodeCX(node),   (int) nodeCY(node), color);
             }
@@ -80,7 +85,7 @@ public class SkillMenu extends Screen {
         // Nodes
         SkillNode hovered = null;
         for (SkillNode node : SkillRegistry.NODES.values()) {
-            int plate = unlocked.contains(node.id()) ? 0xFFE0B040
+            int plate = unlocked().contains(node.id()) ? 0xFFE0B040
                     : isAvailable(node)            ? 0xFF8A7A5A
                     :                                0xFF3A3028;
             int s = nodeSize();
@@ -131,8 +136,8 @@ public class SkillMenu extends Screen {
 
         for (SkillNode node : SkillRegistry.NODES.values()) {
             if (hit(node, event.x(), event.y())) {
-                if (SkillRules.isUnlockable(unlocked, node)) {
-                    unlocked.add(node.id());
+                if (SkillRules.isUnlockable(unlocked(), node)) {
+                    ClientPacketDistributor.sendToServer(new UnlockSkillPayload(node.id()));
                     Minecraft.getInstance().getSoundManager().play(
                             SimpleSoundInstance.forUI(SoundEvents.EXPERIENCE_ORB_PICKUP, 1.0F));
                 }
@@ -174,7 +179,7 @@ public class SkillMenu extends Screen {
     }
 
     @Override
-    public boolean keyPressed(KeyEvent k) {
+    public boolean keyPressed(@NonNull KeyEvent k) {
         if(OPEN_MENU.matches(k)) {
             this.onClose();
             return true;

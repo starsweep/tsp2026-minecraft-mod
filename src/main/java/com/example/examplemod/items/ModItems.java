@@ -1,6 +1,7 @@
 package com.example.examplemod.items;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.data.ModDataComponents;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;

@@ -1,4 +1,4 @@
-package com.example.examplemod.items;
+package com.example.examplemod.data;
 
 import com.example.examplemod.ExampleMod;
 import com.mojang.serialization.Codec;
