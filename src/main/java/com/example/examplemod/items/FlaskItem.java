@@ -1,8 +1,12 @@
 package com.example.examplemod.items;
 
 import com.example.examplemod.data.ModDataComponents;
+import net.minecraft.core.Holder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,11 +25,21 @@ public class FlaskItem extends Item {
         if (level.isClientSide()) return InteractionResult.SUCCESS; // handle client
 
         int charges = stack.getOrDefault(ModDataComponents.CHARGES.get(), 0);
+        int duration = stack.getOrDefault(ModDataComponents.DURATION.get(), 0);
+        Holder<MobEffect> effect = stack.getOrDefault(ModDataComponents.EFFECT.get(), MobEffects.POISON);
         if (charges <= 0) return InteractionResult.FAIL;
 
         stack.set(ModDataComponents.CHARGES.get(), charges - 1);
         player.getCooldowns().addCooldown(stack, 20);
+
         // effect here
+        MobEffectInstance instance = new MobEffectInstance(
+                effect,
+                duration,
+                0
+        );
+        player.addEffect(instance);
+
         return InteractionResult.SUCCESS;
     }
 }

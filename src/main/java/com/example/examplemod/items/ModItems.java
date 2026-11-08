@@ -2,6 +2,7 @@ package com.example.examplemod.items;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.data.ModDataComponents;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -14,11 +15,13 @@ public class ModItems {
     public static final DeferredItem<Item> FLASK;
 
     static {
-        FLASK = ITEMS.registerItem("flask", FlaskItem::new,
+        FLASK = ITEMS.registerItem("flaskpoison", FlaskItem::new,
                 props -> {
                     return props
                             .stacksTo(1)
-                            .component(ModDataComponents.CHARGES.get(), 5);
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.POISON);
                 });
     }
 
