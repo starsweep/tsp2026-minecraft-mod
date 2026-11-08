@@ -62,7 +62,24 @@ public class ExampleMod {
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get());// Add the example item to the tab. For your own tabs, this method is preferred over the event
-                output.accept(ModItems.FLASK.get());// add flask to creative menu
+                output.accept(ModItems.FLASK_POISON.get());// add flask of poison to creative menu
+                output.accept(ModItems.FLASK_REGEN.get());
+                output.accept(ModItems.FLASK_SLOW.get());
+                output.accept(ModItems.FLASK_SPEED.get());
+                output.accept(ModItems.FLASK_WEAK.get());
+                output.accept(ModItems.FLASK_STRENGTH.get());
+                output.accept(ModItems.FLASK_JUMP.get());
+                output.accept(ModItems.FLASK_LEVI.get());
+                output.accept(ModItems.FLASK_BLIND.get());
+                output.accept(ModItems.FLASK_VISION.get());
+                output.accept(ModItems.FLASK_WATER.get());
+                output.accept(ModItems.FLASK_INVIS.get());
+                output.accept(ModItems.FLASK_FIRERES.get());
+                output.accept(ModItems.FLASK_WIND.get());
+                output.accept(ModItems.FLASK_FALL.get());
+                output.accept(ModItems.FLASK_WITHER.get());
+                output.accept(ModItems.FLASK_INSTADMG.get());
+                output.accept(ModItems.FLASK_INSTAHEAL.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
