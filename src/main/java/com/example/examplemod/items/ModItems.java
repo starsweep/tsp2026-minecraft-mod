@@ -35,9 +35,16 @@ public class ModItems {
     public static final DeferredItem<Item> SWORD_SKILL;
     public static final DeferredItem<Item> SHIELD_SKILL;
     public static final DeferredItem<Item> BOW_SKILL;
-
+    public static final DeferredItem<Item> CROSSBOW_SKILL;
 
     static {
+
+        MAGIC_SKILL = ITEMS.registerItem("magic_skill", Item::new, props -> props);
+        SWORD_SKILL = ITEMS.registerItem("sword_skill", Item::new, props -> props);
+        SHIELD_SKILL = ITEMS.registerItem("shield_skill", Item::new, props -> props);
+        BOW_SKILL = ITEMS.registerItem("bow_skill", Item::new, props -> props);
+        CROSSBOW_SKILL = ITEMS.registerItem("crossbow_skill", Item::new, props -> props);
+
         FLASK_POISON = ITEMS.registerItem("flaskpoison", FlaskItem::new,
                 props -> {
                     return props
@@ -193,12 +200,8 @@ public class ModItems {
                             .component(ModDataComponents.DURATION.get(), 1)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_HEALTH);
                 });
-
-        MAGIC_SKILL = ITEMS.registerItem("magic_skill", Item::new, props -> props);
-        SWORD_SKILL = ITEMS.registerItem("sword_skill", Item::new, props -> props);
-        SHIELD_SKILL = ITEMS.registerItem("shield_skill", Item::new, props -> props);
-        BOW_SKILL = ITEMS.registerItem("bow_skill", Item::new, props -> props);
     }
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

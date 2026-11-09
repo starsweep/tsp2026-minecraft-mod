@@ -14,5 +14,6 @@
   "item.examplemod.magic_skill": "Magic Skill",
   "item.examplemod.sword_skill": "Sword Skill",
   "item.examplemod.shield_skill": "Shield Skill",
-  "item.examplemod.bow_skill": "Bow Skill"
+  "item.examplemod.bow_skill": "Bow Skill",
+  "item.examplemod.bow_skill": "Crossbow Skill"
 }

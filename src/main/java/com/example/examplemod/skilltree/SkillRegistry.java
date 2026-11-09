@@ -1,5 +1,6 @@
 package com.example.examplemod.skilltree;
 
+import com.example.examplemod.items.ModItems;
 import com.example.examplemod.skilltree.records.SkillNode;
 import net.minecraft.world.item.Items;
 import java.util.LinkedHashMap;
@@ -29,7 +30,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Magic",
                 spacer, 0,
-                com.example.examplemod.items.ModItems.MAGIC_SKILL.get(),
+                ModItems.MAGIC_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to boost experience picked up.",
@@ -38,7 +39,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Heavy Melee",
                 -spacer, 0,
-                com.example.examplemod.items.ModItems.SHIELD_SKILL.get(),
+                ModItems.SHIELD_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Critical strikes have a 5% chance to deal more damage.",
@@ -47,7 +48,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Light Melee",
                 0, -spacer,
-                com.example.examplemod.items.ModItems.SWORD_SKILL.get(),
+                ModItems.SWORD_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to dodge incoming damage.",
@@ -56,7 +57,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Ranged Weaponry",
                 0, spacer,
-                com.example.examplemod.items.ModItems.BOW_SKILL.get(),
+                ModItems.BOW_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to not consume ammo when firing a bow or crossbow.",
@@ -140,7 +141,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Crossbow Fluency",
                 spacer, 2 * spacer,
-                Items.CROSSBOW,
+                ModItems.CROSSBOW_SKILL.get(),
                 List.of("Ranged Weaponry"),
                 10,
                 "Crossbows deal more damage on headshots.",
