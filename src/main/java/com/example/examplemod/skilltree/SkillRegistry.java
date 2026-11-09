@@ -29,7 +29,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Magic",
                 spacer, 0,
-                Items.EXPERIENCE_BOTTLE,
+                com.example.examplemod.items.ModItems.MAGIC_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to boost experience picked up.",
@@ -38,7 +38,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Heavy Melee",
                 -spacer, 0,
-                Items.WOODEN_AXE,
+                com.example.examplemod.items.ModItems.SHIELD_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Critical strikes have a 5% chance to deal more damage.",
@@ -47,7 +47,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Light Melee",
                 0, -spacer,
-                Items.WOODEN_SWORD,
+                com.example.examplemod.items.ModItems.SWORD_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to dodge incoming damage.",
@@ -56,7 +56,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Ranged Weaponry",
                 0, spacer,
-                Items.ARROW,
+                com.example.examplemod.items.ModItems.BOW_SKILL.get(),
                 List.of("The Beginning"),
                 5,
                 "Gain a 5% chance to not consume ammo when firing a bow or crossbow.",

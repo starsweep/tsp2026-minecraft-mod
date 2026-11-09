@@ -188,6 +188,11 @@ public class ModItems {
                             .component(ModDataComponents.DURATION.get(), 1)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_HEALTH);
                 });
+
+        MAGIC_SKILL = ITEMS.registerItem("magic_skill", Item::new, props -> props);
+        SWORD_SKILL = ITEMS.registerItem("sword_skill", Item::new, props -> props);
+        SHIELD_SKILL = ITEMS.registerItem("shield_skill", Item::new, props -> props);
+        BOW_SKILL = ITEMS.registerItem("bow_skill", Item::new, props -> props);
     }
 
     public static void register(IEventBus eventBus) {

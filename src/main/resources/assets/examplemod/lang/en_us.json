@@ -9,5 +9,10 @@
   "examplemod.configuration.items": "Item List",
   "examplemod.configuration.logDirtBlock": "Log Dirt Block",
   "examplemod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "examplemod.configuration.magicNumber": "Magic Number"
+  "examplemod.configuration.magicNumber": "Magic Number",
+
+  "item.examplemod.magic_skill": "Magic Skill",
+  "item.examplemod.sword_skill": "Sword Skill",
+  "item.examplemod.shield_skill": "Shield Skill",
+  "item.examplemod.bow_skill": "Bow Skill"
 }
