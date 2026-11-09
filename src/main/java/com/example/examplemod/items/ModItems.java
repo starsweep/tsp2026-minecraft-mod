@@ -31,6 +31,11 @@ public class ModItems {
     public static final DeferredItem<Item> FLASK_INSTAHEAL;
     public static final DeferredItem<Item> FLASK_INSTADMG;
 
+    public static final DeferredItem<Item> MAGIC_SKILL;
+    public static final DeferredItem<Item> SWORD_SKILL;
+    public static final DeferredItem<Item> SHIELD_SKILL;
+    public static final DeferredItem<Item> BOW_SKILL;
+
 
     static {
         FLASK_POISON = ITEMS.registerItem("flaskpoison", FlaskItem::new,
