@@ -15,5 +15,12 @@
   "item.examplemod.sword_skill": "Sword Skill",
   "item.examplemod.shield_skill": "Shield Skill",
   "item.examplemod.bow_skill": "Bow Skill",
-  "item.examplemod.bow_skill": "Crossbow Skill"
+  "item.examplemod.crossbow_skill": "Crossbow Skill",
+  "item.examplemod.mace_skill": "Mace Skill",
+  "item.examplemod.potion_skill": "Potions Skill",
+  "item.examplemod.shield_spear": "Spear and Shield Skill",
+  "item.examplemod.triple_bow": "Bow Skill Upgrade",
+  "item.examplemod.duel_swords": "Swords Skill Upgrade",
+  "item.examplemod.melee_skill": "Spear and Trident Skill"
+
 }

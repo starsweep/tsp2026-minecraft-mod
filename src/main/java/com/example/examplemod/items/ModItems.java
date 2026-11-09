@@ -36,6 +36,12 @@ public class ModItems {
     public static final DeferredItem<Item> SHIELD_SKILL;
     public static final DeferredItem<Item> BOW_SKILL;
     public static final DeferredItem<Item> CROSSBOW_SKILL;
+    public static final DeferredItem<Item> DUEL_SWORDS;
+    public static final DeferredItem<Item> TRIPLE_BOW;
+    public static final DeferredItem<Item> MELEE_SKILL;
+    public static final DeferredItem<Item> POTION_SKILL;
+    public static final DeferredItem<Item> SHIELD_SPEAR;
+    public static final DeferredItem<Item> MACE_SKILL;
 
     static {
 
@@ -44,6 +50,12 @@ public class ModItems {
         SHIELD_SKILL = ITEMS.registerItem("shield_skill", Item::new, props -> props);
         BOW_SKILL = ITEMS.registerItem("bow_skill", Item::new, props -> props);
         CROSSBOW_SKILL = ITEMS.registerItem("crossbow_skill", Item::new, props -> props);
+        DUEL_SWORDS = ITEMS.registerItem("duel_swords", Item::new, props -> props);
+        TRIPLE_BOW = ITEMS.registerItem("triple_bow", Item::new, props -> props);
+        MELEE_SKILL = ITEMS.registerItem("melee_skill", Item::new, props -> props);
+        POTION_SKILL = ITEMS.registerItem("potion_skill", Item::new, props -> props);
+        SHIELD_SPEAR = ITEMS.registerItem("shield_spear", Item::new, props -> props);
+        MACE_SKILL = ITEMS.registerItem("mace_skill", Item::new, props -> props);
 
         FLASK_POISON = ITEMS.registerItem("flaskpoison", FlaskItem::new,
                 props -> {

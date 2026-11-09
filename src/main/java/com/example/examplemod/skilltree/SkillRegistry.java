@@ -78,7 +78,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Basic Brewing",
                 2 * spacer, spacer,
-                Items.CAULDRON,
+                ModItems.POTION_SKILL.get(),
                 List.of("Magic"),
                 10,
                 "Gain the ability to brew with a cauldron.",
@@ -90,7 +90,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Dual Wielding",
                 spacer, -2 * spacer,
-                Items.STONE_SWORD,
+                ModItems.DUEL_SWORDS.get(),
                 List.of("Light Melee"),
                 10,
                 "Gain the ability to use a sword in your offhand.",
@@ -99,7 +99,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Lunging",
                 -spacer, -2 * spacer,
-                Items.STONE_SPEAR,
+                ModItems.MELEE_SKILL.get(),
                 List.of("Light Melee"),
                 10,
                 "Spears have an innate weak lunge effect",
@@ -111,7 +111,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Cleaving",
                 -2 * spacer, -spacer,
-                Items.STONE_AXE,
+                ModItems.MACE_SKILL.get(),
                 List.of("Heavy Melee"),
                 10,
                 "Strikes with axes deal more damage the farther you fall. Negate some fall damage when striking this way.",
@@ -120,7 +120,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Parry",
                 -2 * spacer, spacer,
-                Items.SHIELD,
+                ModItems.SHIELD_SPEAR.get(),
                 List.of("Heavy Melee"),
                 10,
                 "Gain the ability to parry with your shield.",
@@ -132,7 +132,7 @@ public class SkillRegistry {
         add(new SkillNode(
                 "Bow Fluency",
                 -spacer, 2 * spacer,
-                Items.BOW,
+                ModItems.TRIPLE_BOW.get(),
                 List.of("Ranged Weaponry"),
                 10,
                 "Gain the ability to move at normal speed while drawing a bow.",
