@@ -24,6 +24,12 @@ public class ModDataComponents {
                     .networkSynchronized(ByteBufCodecs.VAR_INT) // sent to the client
             );
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> MAX_CHARGES =
+            DATA_COMPONENTS.registerComponentType("max_charges", builder -> builder
+                    .persistent(Codec.INT)                      // saved to disk
+                    .networkSynchronized(ByteBufCodecs.VAR_INT) // sent to the client
+            );
+
     // The effect used by a flask. Stored per item stack.
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Holder<MobEffect>>> EFFECT =
             DATA_COMPONENTS.registerComponentType("effect", builder -> builder

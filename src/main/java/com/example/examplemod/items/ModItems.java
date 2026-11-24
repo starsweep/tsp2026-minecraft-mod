@@ -63,6 +63,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.POISON);
                 });
         FLASK_REGEN = ITEMS.registerItem("flaskregeneration", FlaskItem::new,
@@ -71,6 +72,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.REGENERATION);
                 });
         FLASK_STRENGTH = ITEMS.registerItem("flaskstrength", FlaskItem::new,
@@ -79,6 +81,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.STRENGTH);
                 });
         FLASK_WEAK = ITEMS.registerItem("flaskweakness", FlaskItem::new,
@@ -87,6 +90,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WEAKNESS);
                 });
         FLASK_SLOW = ITEMS.registerItem("flaskslowness", FlaskItem::new,
@@ -95,6 +99,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SLOWNESS);
                 });
         FLASK_SPEED = ITEMS.registerItem("flaskspeed", FlaskItem::new,
@@ -103,6 +108,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SPEED);
                 });
 
@@ -112,6 +118,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WATER_BREATHING);
                 });
 
@@ -121,6 +128,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SLOW_FALLING);
                 });
 
@@ -130,6 +138,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WIND_CHARGED);
                 });
         FLASK_VISION = ITEMS.registerItem("flasknightvision", FlaskItem::new,
@@ -138,6 +147,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.NIGHT_VISION);
                 });
 
@@ -147,6 +157,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.BLINDNESS);
                 });
 
@@ -156,6 +167,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.JUMP_BOOST);
                 });
 
@@ -165,6 +177,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.LEVITATION);
                 });
 
@@ -174,6 +187,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INVISIBILITY);
                 });
 
@@ -183,6 +197,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.FIRE_RESISTANCE);
                 });
 
@@ -192,6 +207,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WITHER);
                 });
 
@@ -201,6 +217,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_DAMAGE);
                 });
 
@@ -210,6 +227,7 @@ public class ModItems {
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_HEALTH);
                 });
     }
