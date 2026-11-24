@@ -6,6 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -18,6 +19,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -48,8 +51,15 @@ public class FlaskItem extends Item {
 
         if(hit.getType() == HitResult.Type.BLOCK) {
             BlockPos pos = hit.getBlockPos();
+            BlockState state = level.getBlockState(pos);
 
             if(level.getFluidState(pos).is(FluidTags.WATER)) {
+                level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BOTTLE_FILL, SoundSource.NEUTRAL, 1.0F, 1.0F);
+                level.gameEvent(player, GameEvent.FLUID_PICKUP, pos);
+                stack.set(ModDataComponents.CHARGES.get(), chargesMax);
+                return InteractionResult.SUCCESS;
+            } else if (state.is(BlockTags.CAULDRONS) && level.getBlockState(pos).is(Blocks.WATER_CAULDRON)) {
+                // left separate so that it can drain cauldron in the future
                 level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.BOTTLE_FILL, SoundSource.NEUTRAL, 1.0F, 1.0F);
                 level.gameEvent(player, GameEvent.FLUID_PICKUP, pos);
                 stack.set(ModDataComponents.CHARGES.get(), chargesMax);
