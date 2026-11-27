@@ -31,6 +31,25 @@ public class ModItems {
     public static final DeferredItem<Item> FLASK_INSTAHEAL;
     public static final DeferredItem<Item> FLASK_INSTADMG;
 
+    public static final DeferredItem<Item> SFLASK_POISON;
+    public static final DeferredItem<Item> SFLASK_REGEN;
+    public static final DeferredItem<Item> SFLASK_STRENGTH;
+    public static final DeferredItem<Item> SFLASK_WEAK;
+    public static final DeferredItem<Item> SFLASK_SLOW;
+    public static final DeferredItem<Item> SFLASK_SPEED;
+    public static final DeferredItem<Item> SFLASK_WATER;
+    public static final DeferredItem<Item> SFLASK_FALL;
+    public static final DeferredItem<Item> SFLASK_WIND;
+    public static final DeferredItem<Item> SFLASK_VISION;
+    public static final DeferredItem<Item> SFLASK_BLIND;
+    public static final DeferredItem<Item> SFLASK_JUMP;
+    public static final DeferredItem<Item> SFLASK_LEVI;
+    public static final DeferredItem<Item> SFLASK_INVIS;
+    public static final DeferredItem<Item> SFLASK_FIRERES;
+    public static final DeferredItem<Item> SFLASK_WITHER;
+    public static final DeferredItem<Item> SFLASK_INSTAHEAL;
+    public static final DeferredItem<Item> SFLASK_INSTADMG;
+
     public static final DeferredItem<Item> MAGIC_SKILL;
     public static final DeferredItem<Item> SWORD_SKILL;
     public static final DeferredItem<Item> SHIELD_SKILL;
@@ -222,6 +241,180 @@ public class ModItems {
                 });
 
         FLASK_INSTAHEAL = ITEMS.registerItem("flaskhealing", FlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 1)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_HEALTH);
+                });
+
+        SFLASK_POISON = ITEMS.registerItem("splashflaskpoison", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.POISON);
+                });
+        SFLASK_REGEN = ITEMS.registerItem("splashflaskregeneration", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.REGENERATION);
+                });
+        SFLASK_STRENGTH = ITEMS.registerItem("splashflaskstrength", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.STRENGTH);
+                });
+        SFLASK_WEAK = ITEMS.registerItem("splashflaskweakness", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.WEAKNESS);
+                });
+        SFLASK_SLOW = ITEMS.registerItem("splashflaskslowness", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.SLOWNESS);
+                });
+        SFLASK_SPEED = ITEMS.registerItem("splashflaskspeed", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.SPEED);
+                });
+
+        SFLASK_WATER = ITEMS.registerItem("splashflaskwaterbreathing", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.WATER_BREATHING);
+                });
+
+        SFLASK_FALL = ITEMS.registerItem("splashflaskslowfalling", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.SLOW_FALLING);
+                });
+
+        SFLASK_WIND = ITEMS.registerItem("splashflaskwindcharged", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.WIND_CHARGED);
+                });
+        SFLASK_VISION = ITEMS.registerItem("splashflasknightvision", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.NIGHT_VISION);
+                });
+
+        SFLASK_BLIND = ITEMS.registerItem("splashflaskblindness", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.BLINDNESS);
+                });
+
+        SFLASK_JUMP = ITEMS.registerItem("splashflaskjumpboost", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.JUMP_BOOST);
+                });
+
+        SFLASK_LEVI = ITEMS.registerItem("splashflasklevitation", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.LEVITATION);
+                });
+
+        SFLASK_INVIS = ITEMS.registerItem("splashflaskinvisibility", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.INVISIBILITY);
+                });
+
+        SFLASK_FIRERES = ITEMS.registerItem("splashflaskfireresistance", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.FIRE_RESISTANCE);
+                });
+
+        SFLASK_WITHER = ITEMS.registerItem("splashflaskwither", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.WITHER);
+                });
+
+        SFLASK_INSTADMG = ITEMS.registerItem("splashflaskharming", SplashFlaskItem::new,
+                props -> {
+                    return props
+                            .stacksTo(1)
+                            .component(ModDataComponents.CHARGES.get(), 5)
+                            .component(ModDataComponents.DURATION.get(), 1)
+                            .component(ModDataComponents.MAX_CHARGES.get(), 5)
+                            .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_DAMAGE);
+                });
+
+        SFLASK_INSTAHEAL = ITEMS.registerItem("splashflaskhealing", SplashFlaskItem::new,
                 props -> {
                     return props
                             .stacksTo(1)

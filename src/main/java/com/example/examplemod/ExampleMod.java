@@ -62,7 +62,9 @@ public class ExampleMod {
             .icon(() -> EXAMPLE_ITEM.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
                 output.accept(EXAMPLE_ITEM.get());// Add the example item to the tab. For your own tabs, this method is preferred over the event
-                output.accept(ModItems.FLASK_POISON.get());// add flask of poison to creative menu
+
+                // add regular flasks
+                output.accept(ModItems.FLASK_POISON.get());
                 output.accept(ModItems.FLASK_REGEN.get());
                 output.accept(ModItems.FLASK_SLOW.get());
                 output.accept(ModItems.FLASK_SPEED.get());
@@ -80,6 +82,26 @@ public class ExampleMod {
                 output.accept(ModItems.FLASK_WITHER.get());
                 output.accept(ModItems.FLASK_INSTADMG.get());
                 output.accept(ModItems.FLASK_INSTAHEAL.get());
+
+                // add splash flasks
+                output.accept(ModItems.SFLASK_POISON.get());
+                output.accept(ModItems.SFLASK_REGEN.get());
+                output.accept(ModItems.SFLASK_SLOW.get());
+                output.accept(ModItems.SFLASK_SPEED.get());
+                output.accept(ModItems.SFLASK_WEAK.get());
+                output.accept(ModItems.SFLASK_STRENGTH.get());
+                output.accept(ModItems.SFLASK_JUMP.get());
+                output.accept(ModItems.SFLASK_LEVI.get());
+                output.accept(ModItems.SFLASK_BLIND.get());
+                output.accept(ModItems.SFLASK_VISION.get());
+                output.accept(ModItems.SFLASK_WATER.get());
+                output.accept(ModItems.SFLASK_INVIS.get());
+                output.accept(ModItems.SFLASK_FIRERES.get());
+                output.accept(ModItems.SFLASK_WIND.get());
+                output.accept(ModItems.SFLASK_FALL.get());
+                output.accept(ModItems.SFLASK_WITHER.get());
+                output.accept(ModItems.SFLASK_INSTADMG.get());
+                output.accept(ModItems.SFLASK_INSTAHEAL.get());
             }).build());
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
