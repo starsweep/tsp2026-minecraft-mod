@@ -87,6 +87,7 @@ public class ModItems {
         FLASK_POISON = ITEMS.registerItem("flaskpoison", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Poison")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 600)
@@ -96,6 +97,7 @@ public class ModItems {
         FLASK_REGEN = ITEMS.registerItem("flaskregeneration", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Regeneration")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 600)
@@ -105,6 +107,7 @@ public class ModItems {
         FLASK_STRENGTH = ITEMS.registerItem("flaskstrength", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Strength")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -114,6 +117,7 @@ public class ModItems {
         FLASK_WEAK = ITEMS.registerItem("flaskweakness", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Weakness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -123,6 +127,7 @@ public class ModItems {
         FLASK_SLOW = ITEMS.registerItem("flaskslowness", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Slowness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -132,6 +137,7 @@ public class ModItems {
         FLASK_SPEED = ITEMS.registerItem("flaskspeed", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Swiftness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -142,6 +148,7 @@ public class ModItems {
         FLASK_WATER = ITEMS.registerItem("flaskwaterbreathing", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Water Breathing")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -152,6 +159,7 @@ public class ModItems {
         FLASK_FALL = ITEMS.registerItem("flaskslowfalling", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Slow Falling")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -162,6 +170,7 @@ public class ModItems {
         FLASK_WIND = ITEMS.registerItem("flaskwindcharged", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Wind Charging")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 3000)
@@ -171,6 +180,7 @@ public class ModItems {
         FLASK_VISION = ITEMS.registerItem("flasknightvision", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Night Vision")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -181,6 +191,7 @@ public class ModItems {
         FLASK_BLIND = ITEMS.registerItem("flaskblindness", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Blindness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -191,6 +202,7 @@ public class ModItems {
         FLASK_JUMP = ITEMS.registerItem("flaskjumpboost", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Leaping")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -201,6 +213,7 @@ public class ModItems {
         FLASK_LEVI = ITEMS.registerItem("flasklevitation", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Levitating")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 150)
@@ -211,6 +224,7 @@ public class ModItems {
         FLASK_INVIS = ITEMS.registerItem("flaskinvisibility", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Invisibility")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -221,6 +235,7 @@ public class ModItems {
         FLASK_FIRERES = ITEMS.registerItem("flaskfireresistance", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Fire Resistance")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -231,6 +246,7 @@ public class ModItems {
         FLASK_WITHER = ITEMS.registerItem("flaskwither", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Withering")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 300)
@@ -241,6 +257,7 @@ public class ModItems {
         FLASK_INSTADMG = ITEMS.registerItem("flaskharming", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Harming")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
@@ -251,6 +268,7 @@ public class ModItems {
         FLASK_INSTAHEAL = ITEMS.registerItem("flaskhealing", FlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Flask of Healing")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
@@ -261,6 +279,7 @@ public class ModItems {
         SFLASK_POISON = ITEMS.registerItem("splashflaskpoison", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Poison")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 600)
@@ -270,6 +289,7 @@ public class ModItems {
         SFLASK_REGEN = ITEMS.registerItem("splashflaskregeneration", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Regeneration")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 600)
@@ -279,6 +299,7 @@ public class ModItems {
         SFLASK_STRENGTH = ITEMS.registerItem("splashflaskstrength", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Strength")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -288,6 +309,7 @@ public class ModItems {
         SFLASK_WEAK = ITEMS.registerItem("splashflaskweakness", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Weakness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -297,6 +319,7 @@ public class ModItems {
         SFLASK_SLOW = ITEMS.registerItem("splashflaskslowness", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Slowness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -306,6 +329,7 @@ public class ModItems {
         SFLASK_SPEED = ITEMS.registerItem("splashflaskspeed", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Swiftness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -316,6 +340,7 @@ public class ModItems {
         SFLASK_WATER = ITEMS.registerItem("splashflaskwaterbreathing", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Water Breathing")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -326,6 +351,7 @@ public class ModItems {
         SFLASK_FALL = ITEMS.registerItem("splashflaskslowfalling", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Slow Falling")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -336,6 +362,7 @@ public class ModItems {
         SFLASK_WIND = ITEMS.registerItem("splashflaskwindcharged", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Wind Charging")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 3000)
@@ -345,6 +372,7 @@ public class ModItems {
         SFLASK_VISION = ITEMS.registerItem("splashflasknightvision", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Night Vision")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -355,6 +383,7 @@ public class ModItems {
         SFLASK_BLIND = ITEMS.registerItem("splashflaskblindness", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Blindness")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -370,6 +399,7 @@ public class ModItems {
         SFLASK_JUMP = ITEMS.registerItem("splashflaskjumpboost", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Leaping")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
@@ -380,6 +410,7 @@ public class ModItems {
         SFLASK_LEVI = ITEMS.registerItem("splashflasklevitation", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Levitating")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 150)
@@ -395,6 +426,7 @@ public class ModItems {
         SFLASK_INVIS = ITEMS.registerItem("splashflaskinvisibility", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Invisibility")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -405,6 +437,7 @@ public class ModItems {
         SFLASK_FIRERES = ITEMS.registerItem("splashflaskfireresistance", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Fire Resistance")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
@@ -415,6 +448,7 @@ public class ModItems {
         SFLASK_WITHER = ITEMS.registerItem("splashflaskwither", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Withering")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 300)
@@ -429,6 +463,7 @@ public class ModItems {
         SFLASK_INSTADMG = ITEMS.registerItem("splashflaskharming", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Harming")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
@@ -439,6 +474,7 @@ public class ModItems {
         SFLASK_INSTAHEAL = ITEMS.registerItem("splashflaskhealing", SplashFlaskItem::new,
                 props -> {
                     return props
+                            .overrideDescription("Splash Flask of Healing")
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
