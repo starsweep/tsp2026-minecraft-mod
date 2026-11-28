@@ -81,7 +81,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 600)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.POISON);
                 });
@@ -90,7 +90,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 600)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.REGENERATION);
                 });
@@ -99,7 +99,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.STRENGTH);
                 });
@@ -108,7 +108,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WEAKNESS);
                 });
@@ -117,7 +117,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SLOWNESS);
                 });
@@ -126,7 +126,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SPEED);
                 });
@@ -136,7 +136,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WATER_BREATHING);
                 });
@@ -146,7 +146,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SLOW_FALLING);
                 });
@@ -156,7 +156,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 3000)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WIND_CHARGED);
                 });
@@ -165,7 +165,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.NIGHT_VISION);
                 });
@@ -175,7 +175,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.BLINDNESS);
                 });
@@ -185,7 +185,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.JUMP_BOOST);
                 });
@@ -195,7 +195,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 150)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.LEVITATION);
                 });
@@ -205,7 +205,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INVISIBILITY);
                 });
@@ -215,7 +215,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.FIRE_RESISTANCE);
                 });
@@ -225,7 +225,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 300)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WITHER);
                 });
@@ -255,7 +255,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 600)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.POISON);
                 });
@@ -264,7 +264,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 600)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.REGENERATION);
                 });
@@ -273,7 +273,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.STRENGTH);
                 });
@@ -282,7 +282,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WEAKNESS);
                 });
@@ -291,7 +291,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SLOWNESS);
                 });
@@ -300,7 +300,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SPEED);
                 });
@@ -310,7 +310,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WATER_BREATHING);
                 });
@@ -320,7 +320,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.SLOW_FALLING);
                 });
@@ -330,7 +330,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 3000)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WIND_CHARGED);
                 });
@@ -339,7 +339,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.NIGHT_VISION);
                 });
@@ -349,7 +349,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.BLINDNESS);
                 });
@@ -359,7 +359,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.JUMP_BOOST);
                 });
@@ -369,7 +369,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 150)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.LEVITATION);
                 });
@@ -379,7 +379,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.INVISIBILITY);
                 });
@@ -389,7 +389,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.FIRE_RESISTANCE);
                 });
@@ -399,7 +399,7 @@ public class ModItems {
                     return props
                             .stacksTo(1)
                             .component(ModDataComponents.CHARGES.get(), 5)
-                            .component(ModDataComponents.DURATION.get(), 6000)
+                            .component(ModDataComponents.DURATION.get(), 300)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
                             .component(ModDataComponents.EFFECT.get(), MobEffects.WITHER);
                 });
