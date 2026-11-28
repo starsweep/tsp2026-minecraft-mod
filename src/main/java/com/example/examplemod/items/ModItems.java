@@ -2,11 +2,19 @@ package com.example.examplemod.items;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.data.ModDataComponents;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionContents;
+import net.minecraft.world.item.alchemy.Potions;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
+import java.util.Optional;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS =
@@ -257,7 +265,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 600)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.POISON);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.POISON));
                 });
         SFLASK_REGEN = ITEMS.registerItem("splashflaskregeneration", SplashFlaskItem::new,
                 props -> {
@@ -266,7 +274,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 600)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.REGENERATION);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.REGENERATION));
                 });
         SFLASK_STRENGTH = ITEMS.registerItem("splashflaskstrength", SplashFlaskItem::new,
                 props -> {
@@ -275,7 +283,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.STRENGTH);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.STRENGTH));
                 });
         SFLASK_WEAK = ITEMS.registerItem("splashflaskweakness", SplashFlaskItem::new,
                 props -> {
@@ -284,7 +292,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.WEAKNESS);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.WEAKNESS));
                 });
         SFLASK_SLOW = ITEMS.registerItem("splashflaskslowness", SplashFlaskItem::new,
                 props -> {
@@ -293,7 +301,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.SLOWNESS);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.SLOWNESS));
                 });
         SFLASK_SPEED = ITEMS.registerItem("splashflaskspeed", SplashFlaskItem::new,
                 props -> {
@@ -302,7 +310,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.SPEED);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.SWIFTNESS));
                 });
 
         SFLASK_WATER = ITEMS.registerItem("splashflaskwaterbreathing", SplashFlaskItem::new,
@@ -312,7 +320,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.WATER_BREATHING);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.WATER_BREATHING));
                 });
 
         SFLASK_FALL = ITEMS.registerItem("splashflaskslowfalling", SplashFlaskItem::new,
@@ -322,7 +330,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.SLOW_FALLING);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.SLOW_FALLING));
                 });
 
         SFLASK_WIND = ITEMS.registerItem("splashflaskwindcharged", SplashFlaskItem::new,
@@ -332,7 +340,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 3000)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.WIND_CHARGED);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.WIND_CHARGED));
                 });
         SFLASK_VISION = ITEMS.registerItem("splashflasknightvision", SplashFlaskItem::new,
                 props -> {
@@ -341,7 +349,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.NIGHT_VISION);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.NIGHT_VISION));
                 });
 
         SFLASK_BLIND = ITEMS.registerItem("splashflaskblindness", SplashFlaskItem::new,
@@ -351,7 +359,12 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.BLINDNESS);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(
+                                    Optional.empty(),   // no base potion
+                                    Optional.of(0x1F1F23), // optional custom color (ARGB/RGB int)
+                                    List.of(new MobEffectInstance(MobEffects.BLINDNESS, 1200)),
+                                    Optional.empty()    // custom name (1.21.2+; omit on 1.21.0/1.21.1)
+                            ));
                 });
 
         SFLASK_JUMP = ITEMS.registerItem("splashflaskjumpboost", SplashFlaskItem::new,
@@ -361,7 +374,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1200)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.JUMP_BOOST);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.LEAPING));
                 });
 
         SFLASK_LEVI = ITEMS.registerItem("splashflasklevitation", SplashFlaskItem::new,
@@ -371,7 +384,12 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 150)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.LEVITATION);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(
+                                    Optional.empty(),   // no base potion
+                                    Optional.of(0xCEFFFF), // optional custom color (ARGB/RGB int)
+                                    List.of(new MobEffectInstance(MobEffects.LEVITATION, 150)),
+                                    Optional.empty()    // custom name (1.21.2+; omit on 1.21.0/1.21.1)
+                            ));
                 });
 
         SFLASK_INVIS = ITEMS.registerItem("splashflaskinvisibility", SplashFlaskItem::new,
@@ -381,7 +399,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.INVISIBILITY);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.INVISIBILITY));
                 });
 
         SFLASK_FIRERES = ITEMS.registerItem("splashflaskfireresistance", SplashFlaskItem::new,
@@ -391,7 +409,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 2400)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.FIRE_RESISTANCE);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.FIRE_RESISTANCE));
                 });
 
         SFLASK_WITHER = ITEMS.registerItem("splashflaskwither", SplashFlaskItem::new,
@@ -401,7 +419,11 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 300)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.WITHER);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(
+                                    Optional.empty(),
+                                    Optional.of(0x736156),
+                                    List.of(new MobEffectInstance(MobEffects.WITHER, 300)),
+                                    Optional.empty() ));
                 });
 
         SFLASK_INSTADMG = ITEMS.registerItem("splashflaskharming", SplashFlaskItem::new,
@@ -411,7 +433,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_DAMAGE);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.HARMING));
                 });
 
         SFLASK_INSTAHEAL = ITEMS.registerItem("splashflaskhealing", SplashFlaskItem::new,
@@ -421,7 +443,7 @@ public class ModItems {
                             .component(ModDataComponents.CHARGES.get(), 5)
                             .component(ModDataComponents.DURATION.get(), 1)
                             .component(ModDataComponents.MAX_CHARGES.get(), 5)
-                            .component(ModDataComponents.EFFECT.get(), MobEffects.INSTANT_HEALTH);
+                            .component(DataComponents.POTION_CONTENTS, new PotionContents(Potions.HEALING));
                 });
     }
 
